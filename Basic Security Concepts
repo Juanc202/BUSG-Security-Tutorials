@@ -1,0 +1,7 @@
+def least_privilege(user):
+  """Returns a list of permissions that the user should have."""
+  permissions = []
+  for permission in all_permissions:
+    if permission.is_required_for_job(user.job_title):
+      permissions.append(permission)
+  return permissions
